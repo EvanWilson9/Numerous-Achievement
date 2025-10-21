@@ -6,7 +6,11 @@ public class RomanNumeralsConverter {
         StringBuilder romanNumeralString = new StringBuilder();
 
         if(number > 0){
-            romanNumeralString.append("I".repeat(number));
+            if(number == 4){
+                romanNumeralString.append("IV");
+            } else {
+                romanNumeralString.append("I".repeat(number));
+            }
         }
 
         return String.valueOf(romanNumeralString);
