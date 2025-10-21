@@ -58,4 +58,9 @@ public class RomanNumeralsConverterTest {
         Assertions.assertEquals("M", converter.convertToRomanNumerals(1000));
     }
 
+    @Test
+    public void convertRomanNumeralFourteen(){
+        RomanNumeralsConverter converter = new RomanNumeralsConverter();
+        Assertions.assertEquals("XIV", converter.convertToRomanNumerals(14));
+    }
 }
