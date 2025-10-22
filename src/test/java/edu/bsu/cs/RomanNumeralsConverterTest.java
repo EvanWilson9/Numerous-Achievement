@@ -70,5 +70,16 @@ public class RomanNumeralsConverterTest {
         Assertions.assertEquals("MMM", converter.convertToRomanNumerals(3000));
     }
 
+    @Test
+    public void convertOverRange(){
+        RomanNumeralsConverter converter = new RomanNumeralsConverter();
+        Assertions.assertEquals("Number is out of boundaries.", converter.convertToRomanNumerals(3001));
+    }
+
+    @Test
+    public void convertUnderRange(){
+        RomanNumeralsConverter converter = new RomanNumeralsConverter();
+        Assertions.assertEquals("Number is out of boundaries.", converter.convertToRomanNumerals(0));
+    }
 
 }

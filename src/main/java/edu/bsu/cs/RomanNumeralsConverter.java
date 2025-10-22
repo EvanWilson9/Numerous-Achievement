@@ -6,6 +6,10 @@ public class RomanNumeralsConverter {
         StringBuilder romanNumeralString = new StringBuilder();
         int remainingValue = number;
 
+        if(remainingValue < 1 || remainingValue > 3000){
+            return "Number is out of boundaries.";
+        }
+
         while(true) {
 
             if (remainingValue / 1000 >= 1) {
