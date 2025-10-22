@@ -26,16 +26,17 @@ public class RomanNumeralsConverter {
             } else if (remainingValue / 5 >= 1) {
                 romanNumeralString.append("V");
                 remainingValue -= 5;
-            } else if (remainingValue > 0) {
-                if (remainingValue == 4) {
-                    romanNumeralString.append("IV");
-                    remainingValue -= 4;
-                } else {
-                    romanNumeralString.append("I".repeat(remainingValue));
-                    remainingValue -= remainingValue;
-                }
+            }
+            else if (remainingValue == 4) {
+                romanNumeralString.append("IV");
+                remainingValue -= 4;
                 break;
-            } else if (remainingValue == 0) {
+            }
+            else if(remainingValue > 0){
+                romanNumeralString.append("I".repeat(remainingValue));
+                remainingValue -= remainingValue;
+                break;
+            } else {
                 break;
             }
         }

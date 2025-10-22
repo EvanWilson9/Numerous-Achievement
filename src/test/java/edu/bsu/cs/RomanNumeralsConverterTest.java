@@ -63,4 +63,12 @@ public class RomanNumeralsConverterTest {
         RomanNumeralsConverter converter = new RomanNumeralsConverter();
         Assertions.assertEquals("XIV", converter.convertToRomanNumerals(14));
     }
+
+    @Test
+    public void convertRomanNumeralThreeThousand(){
+        RomanNumeralsConverter converter = new RomanNumeralsConverter();
+        Assertions.assertEquals("MMM", converter.convertToRomanNumerals(3000));
+    }
+
+
 }
